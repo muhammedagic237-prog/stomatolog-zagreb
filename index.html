@@ -828,6 +828,56 @@
         </svg>
     </button>
 
+    <!-- Appointment Modal -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Zatvori">×</button>
+            <div class="modal-header">
+                <h2 class="modal-title">Zakažite <span class="highlight">termin</span></h2>
+                <p class="modal-subtitle">Odaberite željeno vrijeme i mi ćemo vas nazvati za potvrdu.</p>
+            </div>
+            <form class="appointment-form" id="modalAppointmentForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="modal-name">Ime i prezime</label>
+                        <input type="text" id="modal-name" name="name" required placeholder="Vaše ime">
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-phone">Telefon</label>
+                        <input type="tel" id="modal-phone" name="phone" required placeholder="Vaš broj telefona">
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-service">Usluga</label>
+                        <select id="modal-service" name="service" required>
+                            <option value="" disabled selected>Odaberite uslugu</option>
+                            <option value="pregled">Opći pregled</option>
+                            <option value="izbjeljivanje">Izbjeljivanje zubi</option>
+                            <option value="implantati">Dentalni implantati</option>
+                            <option value="ortodoncija">Ortodoncija</option>
+                            <option value="estetika">Estetska stomatologija</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-date">Datum</label>
+                        <input type="date" id="modal-date" name="date" required>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="modal-message">Dodatna napomena (opcionalno)</label>
+                    <textarea id="modal-message" name="message" rows="3"
+                        placeholder="Želite li nam nešto posebno napomenuti?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <span>Pošaljite zahtjev</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 

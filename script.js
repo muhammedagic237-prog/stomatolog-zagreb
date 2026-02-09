@@ -559,4 +559,55 @@ document.addEventListener('DOMContentLoaded', function () {
         // Optional: Add touch support if needed, but range input handles it mostly.
     }
 
+    // ============================================
+    // APPOINTMENT MODAL
+    // ============================================
+    const modal = document.getElementById('appointmentModal');
+    const openBtn = document.querySelectorAll('.nav-cta, .hero .btn-primary, .cta .btn-outline-white');
+    const closeBtn = document.querySelector('.modal-close');
+    const backdrop = document.querySelector('.modal-backdrop');
+    const modalForm = document.getElementById('modalAppointmentForm');
+
+    function openModal(e) {
+        if (e) e.preventDefault();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
+    openBtn.forEach(btn => btn.addEventListener('click', openModal));
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+
+    // Close on ESC
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    if (modalForm) {
+        modalForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+
+            btn.innerHTML = '<span>✓ Zahtjev poslan!</span>';
+            btn.style.background = '#27ae60';
+
+            setTimeout(() => {
+                closeModal();
+                this.reset();
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+            }, 2000);
+        });
+    }
+
 });
