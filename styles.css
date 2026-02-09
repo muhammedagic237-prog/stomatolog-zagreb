@@ -2030,3 +2030,74 @@ select {
         width: 100%;
     }
 }
+
+/* CRITICAL FIXES FOR VISIBILITY - ADDED BY SUPPORT */
+#services,
+#services .section-container,
+#services .services-grid,
+#services .service-card,
+#services .service-content,
+#services .section-header,
+#services .section-title,
+#services .section-description,
+#services h2,
+#services h3,
+#services p,
+#services span,
+#services div {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+#services .services-grid {
+    display: grid !important;
+}
+
+#services .service-card {
+    display: block !important;
+    background: #fff !important;
+    overflow: visible !important;
+    height: auto !important;
+    transform: none !important;
+}
+
+#services .service-image {
+    display: block !important;
+    overflow: hidden !important;
+    height: 180px !important;
+    position: relative !important;
+}
+
+#services .service-image img {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#services .service-content {
+    display: block !important;
+    background: #fff !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+#services .service-link {
+    display: inline-flex !important;
+}
+
+#services .section-title,
+#services .section-title span,
+#services .section-description,
+#services .service-title,
+#services .service-description,
+#services .service-icon {
+    color: #000000 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+}
+
+/* Reduce spacing specifically */
+#services .section-container {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
