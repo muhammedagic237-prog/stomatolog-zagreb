@@ -1,6 +1,6 @@
-# Privatna stomatološka ordinacija Marija Rašin dr. stom.
+# Privatna stomatološka ordinacija ORAL DENT - Dr. Anes Krajišnik
 
-Modern, responsive website for Dr. Marija Rašin's dental clinic in Zagreb.
+Modern, responsive website for Dr. Anes Krajišnik's dental clinic ORAL DENT.
 
 ## Features
 - **Modern Design:** Clean, professional aesthetic with premium teal and gold color palette.
@@ -21,5 +21,5 @@ Modern, responsive website for Dr. Marija Rašin's dental clinic in Zagreb.
 Simply open `index.html` in any modern web browser.
 
 ## Credits
-Built for Dr. Marija Rašin.
+Built for ORAL DENT by Dr. Anes Krajišnik.
 Developed by [Your Name/Agency]

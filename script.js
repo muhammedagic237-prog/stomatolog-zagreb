@@ -519,4 +519,44 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', debounce(handleNavScroll));
     window.addEventListener('scroll', debounce(highlightNavLink));
 
+
+    // ============================================
+    // SMOOTH SCROLLING (LENIS)
+    // ============================================
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // ============================================
+    // BEFORE/AFTER SLIDER
+    // ============================================
+    const sliderContainer = document.querySelector('.comparison-container');
+    const sliderRange = document.querySelector('.comparison-range');
+    const afterImage = document.querySelector('.comparison-after');
+    const sliderHandle = document.querySelector('.comparison-handle');
+
+    if (sliderRange && afterImage && sliderHandle) {
+        sliderRange.addEventListener('input', (e) => {
+            const value = e.target.value;
+            afterImage.style.width = `${value}%`;
+            sliderHandle.style.left = `${value}%`;
+        });
+
+        // Optional: Add touch support if needed, but range input handles it mostly.
+    }
+
 });
