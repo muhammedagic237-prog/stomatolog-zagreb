@@ -721,7 +721,7 @@ select {
 .section-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: var(--space-5xl) var(--space-xl);
+    padding: var(--space-3xl) var(--space-xl);
 }
 
 .section-header {
@@ -1846,6 +1846,23 @@ select {
 .service-card .service-content * {
     opacity: 1 !important;
     visibility: visible !important;
+}
+
+.service-card .service-title,
+.service-card h3 {
+    color: #1a1f25 !important;
+    /* Force dark color */
+}
+
+.service-card .service-description,
+.service-card p {
+    color: #6c757d !important;
+    /* Force gray color */
+}
+
+.service-card .service-icon {
+    color: #1a1f25 !important;
+    /* Force dark color */
 }
 
 /* ============================================
