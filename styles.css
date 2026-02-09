@@ -721,11 +721,11 @@ select {
 .section-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: var(--space-3xl) var(--space-xl);
+    padding: var(--space-2xl) var(--space-xl);
 }
 
 .section-header {
-    margin-bottom: var(--space-4xl);
+    margin-bottom: var(--space-2xl);
 }
 
 .section-header.center {
